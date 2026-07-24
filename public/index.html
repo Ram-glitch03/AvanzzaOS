@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avanzza OS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">A</div>
+      <div>
+        <div class="brand-name">Avanzza OS</div>
+        <div class="brand-sub" id="brandSub">Panel de control</div>
+      </div>
+    </div>
+    <nav id="nav">
+      <div class="nav-group">Panorama</div>
+      <button data-view="resumen" class="active"><span class="ico">◧</span>Resumen</button>
+      <button data-view="finanzas"><span class="ico">$</span>Finanzas</button>
+      <div class="nav-group">Operación</div>
+      <button data-view="clientes"><span class="ico">◎</span>Clientes</button>
+      <button data-view="seguimiento"><span class="ico">▤</span>Seguimiento</button>
+      <button data-view="proyectos"><span class="ico">◳</span>Proyectos</button>
+      <div class="nav-group">Comercial</div>
+      <button data-view="productos"><span class="ico">▦</span>Productos</button>
+      <button data-view="paquetes"><span class="ico">❏</span>Paquetes</button>
+      <button data-view="cotizaciones"><span class="ico">≣</span>Cotizaciones</button>
+      <div class="nav-group">Stack de IA</div>
+      <button data-view="agentes"><span class="ico">✦</span>Agentes</button>
+      <button data-view="uso"><span class="ico">∿</span>Uso &amp; Tokens</button>
+      <button data-view="suscripciones"><span class="ico">↻</span>Suscripciones</button>
+      <button data-view="skills"><span class="ico">⚡</span>Skills</button>
+      <button data-view="conexiones"><span class="ico">⇄</span>Conexiones</button>
+      <div class="nav-group">Sistema</div>
+      <button data-view="obsidian"><span class="ico">◆</span>Obsidian</button>
+      <button data-view="equipo"><span class="ico">☺</span>Equipo</button>
+      <button data-view="ajustes"><span class="ico">⚙</span>Ajustes</button>
+    </nav>
+    <div class="sidebar-foot">
+      <div id="userBox" class="user-box hidden">
+        <div class="user-line"><span id="userAvatar" class="user-avatar"></span><span id="userName"></span></div>
+        <div id="lastEdit" class="last-edit"></div>
+        <button id="logoutBtn" class="ghost small">Cerrar sesión</button>
+      </div>
+      <button id="exportBtn" class="ghost small">Exportar respaldo</button>
+    </div>
+  </aside>
+  <main id="main" class="viz-root"></main>
+</div>
+
+<div id="authWrap" class="auth-wrap hidden">
+  <form id="authForm" class="auth-card">
+    <div class="auth-brand"><div class="brand-mark">A</div><div><div class="brand-name">Avanzza OS</div><div class="brand-sub">Acceso del equipo</div></div></div>
+    <div class="field"><label>Usuario</label><select id="authUser" name="user"></select></div>
+    <div class="field"><label>Contraseña</label><input id="authPass" name="password" type="password" autocomplete="current-password" required></div>
+    <div id="authError" class="auth-error hidden"></div>
+    <button type="submit" class="primary" style="width:100%">Entrar</button>
+  </form>
+</div>
+<div id="modalWrap" class="modal-wrap hidden">
+  <div class="modal">
+    <div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose" class="ghost">✕</button></div>
+    <form id="modalForm"></form>
+  </div>
+</div>
+<div id="tooltip" class="tooltip hidden"></div>
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>

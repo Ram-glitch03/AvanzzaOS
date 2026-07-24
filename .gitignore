@@ -1,0 +1,19 @@
+# Datos del negocio — NUNCA se suben al repo (viven en Supabase)
+data/
+
+# Secretos y entorno
+.env
+.env.local
+.env*.local
+
+# Dependencias / build
+node_modules/
+.vercel/
+
+# Config local del entorno de desarrollo
+.claude/
+
+# Sistema
+.DS_Store
+*.bak
+*.log
